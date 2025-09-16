@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Education — Abisha Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* ===== Body Background ===== */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background: linear-gradient(-45deg, #ffe0b2, #ffccbc, #ffe57f, #fcb69f);
+      background-size: 400% 400%;
+      animation: gradientMove 12s ease infinite;
+    }
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* ===== Navbar ===== */
+    .navbar {
+      background-color: lightsalmon;
+      transition: all 0.4s ease;
+    }
+    .navbar-brand {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: black !important;
+    }
+    .nav-link {
+      color: black !important;
+      font-weight: 500;
+    }
+    .nav-link:hover {
+      color: #ffc107;
+      transform: translateY(-2px);
+      transition: all 0.3s ease;
+    }
+
+    /* ===== Section Title ===== */
+    .education-section {
+      padding: 80px 20px;
+      position: relative;
+      z-index: 1;
+    }
+    .education-section h2 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 50px;
+      color: #333;
+      text-align: center;
+    }
+
+    /* ===== Timeline ===== */
+    .education-timeline {
+      position: relative;
+      margin: 0 auto;
+      padding-left: 40px;
+      border-left: 4px solid #f57c00;
+      max-width: 800px;
+    }
+    .timeline-item {
+      margin-bottom: 40px;
+      position: relative;
+      animation: fadeInUp 1s ease both;
+    }
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: -14px;
+      top: 5px;
+      width: 24px;
+      height: 24px;
+      background: #ff7043;
+      border-radius: 50%;
+      border: 3px solid #fff;
+      box-shadow: 0 0 0 3px #fbc02d;
+    }
+    .timeline-item h5 {
+      font-weight: bold;
+      margin-bottom: 5px;
+      color: #222;
+      padding-left: 20px;
+    }
+    .timeline-item span {
+      font-size: 0.9rem;
+      color: #555;
+      padding-left: 20px;
+    }
+    .timeline-item p {
+      margin-top: 10px;
+      color: #444;
+      padding-left: 20px;
+    }
+
+    /* Animation */
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ===== Button ===== */
+    .btn-primary {
+      background-color: peru;
+      border: none;
+      border-radius: 10px;
+      padding: 12px 30px;
+      font-weight: 500;
+    }
+    .btn-primary:hover {
+      background-color: orange;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="index.html"></a>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="skills.html">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+          <li class="nav-item"><a class="nav-link active" href="education.html">Education</a></li>
+          <li class="nav-item"><a class="nav-link" href="achievements.html">Achievements</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Education Section -->
+  <section class="education-section container">
+    <h2>My Education</h2>
+
+    <div class="education-timeline">
+      <div class="timeline-item">
+        <h5>Master of Computer Applications (MCA)</h5>
+        <span>Sarah Tucker College, Tirunelveli | 2023 – 2025</span>
+        <p>Specialized in software development, mobile app development, and advanced web technologies.</p>
+      </div>
+      <div class="timeline-item">
+        <h5>BSc Information Technology</h5>
+        <span>Thanthai Hans Roever College, Perambalur | 2019 – 2022</span>
+        <p>Focused on programming, database management, and web development fundamentals.</p>
+      </div>
+      <div class="timeline-item">
+        <h5>Higher Secondary (Bio Computer)</h5>
+        <span>Reach Matric Hr. Sec. School, Tirunelveli | 2018 – 2019</span>
+        <p>Completed Computer Science stream with a strong foundation in mathematics and problem-solving.</p>
+      </div>
+      <div class="timeline-item">
+        <h5>Secondary Education (SSLC)</h5>
+        <span>Reach Matric Hr. Sec. School, Tirunelveli | 2016 – 2017</span>
+        <p>Completed SSLC with distinction, laying the groundwork for future studies in computer science.</p>
+      </div>
+    </div>
+
+    <div class="text-center mt-5">
+      <a href="achievements.html" class="btn btn-primary">See My Achievements</a>
+    </div>
+  </section>
+</body>
+</html>

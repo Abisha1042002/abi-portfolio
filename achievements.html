@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Achievements & Certifications - M. Abisha</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #ffe0b2, #ffcc80);
+      overflow-x: hidden;
+    }
+    .navbar {
+      background: wheat;
+    }
+    .navbar-brand, .nav-link {
+      color: black !important;
+      font-weight: 500;
+      font-size: large;
+    }
+    .nav-link:hover {
+      color: #ff7043 !important;
+      transition: 0.3s;
+    }
+
+    .containers {
+      margin-top: 120px;
+      max-width: 1100px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    h1 {
+      font-weight: bold;
+      margin-bottom: 50px;
+      text-align: center;
+      color: #333;
+    }
+
+    /* Certificate Image Card */
+    .certificate-card {
+      background: peachpuff;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0px 6px 15px rgba(0,0,0,0.1);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      margin-bottom: 40px;
+      cursor: pointer;
+    }
+    .certificate-card:hover {
+      transform: scale(1.03);
+      box-shadow: 0px 12px 25px rgba(0,0,0,0.2);
+    }
+    .certificate-img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+    .certificate-card:hover .certificate-img {
+      transform: scale(1.08);
+    }
+    .certificate-body {
+      padding: 20px;
+      text-align: center;
+    }
+    .certificate-body h5 {
+      font-weight: bold;
+      color: #023e8a;
+    }
+    .certificate-body p {
+      color: #555;
+      font-size: 0.95rem;
+      margin-top: 8px;
+    }
+
+    footer {
+      margin-top: 50px;
+      text-align: center;
+      color: #666;
+      font-size: 15px;
+      padding: 20px 0;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="skills.html">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="education.html">Education</a></li>
+          <li class="nav-item"><a class="nav-link active" href="achievements.html">Achievements</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Content -->
+  <div class="containers">
+    <h1>🏆 My Achievements & Certifications</h1>
+
+    <div class="row g-4">
+      <!-- Certificate 1 -->
+      <div class="col-md-6">
+        <div class="certificate-card" data-bs-toggle="modal" data-bs-target="#previewModal" data-img="assets/internship certificate.jpg">
+          <img src="assets/internship certificate.jpg" alt="Web Designing Internship Certificate" class="certificate-img">
+          <div class="certificate-body">
+            <h5>Advanced Web Designing Internship</h5>
+            <p>Completed internship at <b>Malaris Software Solutions</b>.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Certificate 2 -->
+      <div class="col-md-6">
+        <div class="certificate-card" data-bs-toggle="modal" data-bs-target="#previewModal" data-img="assets/project certificate.jpg">
+          <img src="assets/project certificate.jpg" alt="Flutter Project Certificate" class="certificate-img">
+          <div class="certificate-body">
+            <h5>Flutter Development Project</h5>
+            <p>Developed <b>MyChurch App</b> with donations, shopping, and more.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Certificate 3 -->
+      <div class="col-md-6">
+        <div class="certificate-card" data-bs-toggle="modal" data-bs-target="#previewModal" data-img="assets/publication certificate.jpg">
+          <img src="assets/publication certificate.jpg" alt="Research Paper Certificate" class="certificate-img">
+          <div class="certificate-body">
+            <h5>Research Paper Publication</h5>
+            <p>Published a paper in <b>IJRAR Journal</b>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Image Preview Modal -->
+  <div class="modal fade" id="previewModal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content bg-transparent border-0">
+        <img id="previewImage" src="" class="img-fluid rounded shadow" alt="Certificate Preview">
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 M. Abisha | All Rights Reserved</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Image preview logic
+    const previewModal = document.getElementById('previewModal');
+    previewModal.addEventListener('show.bs.modal', function (event) {
+      const card = event.relatedTarget;
+      const imgSrc = card.getAttribute('data-img');
+      document.getElementById('previewImage').src = imgSrc;
+    });
+  </script>
+</body>
+</html>
